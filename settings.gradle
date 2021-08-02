@@ -1,0 +1,5 @@
+rootProject.name = 'reactive'
+
+include 'core'
+include 'datalayer'
+include 'application'

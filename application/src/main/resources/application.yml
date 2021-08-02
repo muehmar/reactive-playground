@@ -1,0 +1,20 @@
+spring:
+  r2dbc:
+    url: 'r2dbc:mariadb://localhost:3308/reactive'
+    username: 'reactive'
+    password: 'changeme'
+
+app:
+  database:
+    username: 'reactive'
+    password: 'changeme'
+    hostAndPath: 'localhost:3308/reactive'
+    driver: 'mariadb'
+    jooq:
+      dialect: 'MARIADB_10_3'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

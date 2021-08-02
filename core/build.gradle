@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:' + rootProject.ext.lombokVersion
+    annotationProcessor 'org.projectlombok:lombok:' + rootProject.ext.lombokVersion
+
+    implementation group: 'io.projectreactor', name: 'reactor-core', version: '3.4.8'
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.32'
+    runtimeOnly group: 'ch.qos.logback', name: 'logback-core', version: '1.2.4'
+}
